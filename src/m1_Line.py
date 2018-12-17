@@ -703,7 +703,7 @@ class Line(object):
             print(line2)  # Should print: Line[(0, 1), (10, 20)]
         """
         # ---------------------------------------------------------------------
-        # TODO: 13.
+        # Done: 13.
         #   a. READ the above specification, including the Example.
         #        ** ASK QUESTIONS AS NEEDED. **
         #        ** Be sure you understand it, ESPECIALLY the Example.
@@ -711,7 +711,8 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # ---------------------------------------------------------------------
-        return Line(self.original_start, self.original_end)
+        self.start = self.original_start
+        self.end = self.original_end
 
 ###############################################################################
 # The TEST functions for the  Line  class begin here.
