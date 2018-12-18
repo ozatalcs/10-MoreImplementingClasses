@@ -20,7 +20,7 @@ def main():
     print('Un-comment the calls in MAIN one by one')
     print(' to run the testing code as you complete the TODOs.')
 
-    # run_test_simple_t()
+    run_test_simple_t()
     # run_test_set_colors()
     # run_test_move_by()
     # run_test_clone()
@@ -170,6 +170,9 @@ class CapitalT(object):
         #   and *** NO OTHER INSTANCE VARIABLES. ***
         #   Note: Implement   attach_to   before testing this __init__ method.
         # ---------------------------------------------------------------------
+        self.h_rect = rg.Rectangle(rg.Point(intersection_center.x - width/2,  intersection_center.y - letter_thickness), rg.Point( intersection_center.x + width/2,  intersection_center.y + letter_thickness))
+        self.v_rect = rg.Rectangle(rg.Point(intersection_center.x - letter_thickness/2, intersection_center.y - letter_thickness/2), rg.Point(intersection_center.x + letter_thickness/2, intersection_center.y - letter_thickness/2 + height))
+        
 
     def attach_to(self, window):
         """
