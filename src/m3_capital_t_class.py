@@ -22,7 +22,7 @@ def main():
 
     run_test_simple_t()
     run_test_set_colors()
-    # run_test_move_by()
+    run_test_move_by()
     # run_test_clone()
 
 
@@ -172,6 +172,10 @@ class CapitalT(object):
         # ---------------------------------------------------------------------
         self.h_rect = rg.Rectangle(rg.Point(intersection_center.x - width/2,  intersection_center.y - letter_thickness/2), rg.Point( intersection_center.x + width/2,  intersection_center.y + letter_thickness/2))
         self.v_rect = rg.Rectangle(rg.Point(intersection_center.x - letter_thickness/2, intersection_center.y - letter_thickness/2), rg.Point(intersection_center.x + letter_thickness/2, intersection_center.y - letter_thickness/2 + height))
+        self.intersection_center = intersection_center
+        self.width = width
+        self.letter_thickness = letter_thickness
+        self.height = height
 
     def attach_to(self, window):
         """
@@ -274,6 +278,8 @@ class CapitalT(object):
         #        Note: the pdf shows the different locations that
         #        the T moves through, but there is only one T at any moment.
         # ---------------------------------------------------------------------
+        self.intersection_center = rg.Point(self.intersection_center.x + dx, self.intersection_center.y + dy)
+        print(self.intersection_center)
 
     def clone(self):
         """
