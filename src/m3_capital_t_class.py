@@ -241,7 +241,7 @@ class CapitalT(object):
         self.h_rect.fill_color = fill_color
         self.v_rect.fill_color = fill_color
         self.h_rect.outline_color = outline_color
-        self.h_rect.outline_color = outline_color
+        self.v_rect.outline_color = outline_color
 
     def move_by(self, dx, dy):
         """
@@ -308,7 +308,7 @@ class CapitalT(object):
           :rtype: CapitalT
         """
         # ---------------------------------------------------------------------
-        # TODO: 7.
+        # Done: 7.
         #   READ the above specification, including the Example.
         #   Implement this method, then TEST it by:
         #     a. Un-comment the call to its test function, in main.  Run.
@@ -321,6 +321,7 @@ class CapitalT(object):
         # variables beyond  h_rect  and  v_rect, at any point of this exercise.
         #######################################################################
         clone = CapitalT(self.intersection_center, self.width, self.height, self.letter_thickness)
+        clone.set_colors(self.h_rect.fill_color, self.h_rect.outline_color)
         return clone
 
 # -----------------------------------------------------------------------------
