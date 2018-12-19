@@ -23,7 +23,7 @@ def main():
     run_test_simple_t()
     run_test_set_colors()
     run_test_move_by()
-    # run_test_clone()
+    run_test_clone()
 
 
 def run_test_simple_t():
@@ -279,7 +279,7 @@ class CapitalT(object):
         #        the T moves through, but there is only one T at any moment.
         # ---------------------------------------------------------------------
         self.intersection_center = rg.Point(self.intersection_center.x + dx, self.intersection_center.y + dy)
-        print(self.intersection_center)
+        # print(self.intersection_center)
 
     def clone(self):
         """
@@ -314,7 +314,8 @@ class CapitalT(object):
         # IMPORTANT RESTRICTION: You are NOT permitted to add any instance
         # variables beyond  h_rect  and  v_rect, at any point of this exercise.
         #######################################################################
-
+        clone = CapitalT(self.intersection_center, self.width, self.height, self.letter_thickness)
+        return clone
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
